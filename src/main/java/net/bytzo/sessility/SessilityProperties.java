@@ -7,7 +7,8 @@ import net.minecraft.server.dedicated.Settings;
 
 public class SessilityProperties extends Settings<SessilityProperties> {
 	public final int sessileTimeout = this.get("sessile-timeout", 120);
-	public final String sessileDisplayColor = this.get("sessile-display-color", "gray");
+	public final long afkTimeout = this.get("afk-timeout", 0);
+	public final String messageAfkKick = this.get("message-afk-kick", "");
 	public final String messageSessile = this.get("message-sessile", "");
 	public final String messageMotile = this.get("message-motile", "");
 
