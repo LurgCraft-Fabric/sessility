@@ -5,10 +5,16 @@ plugins {
 group = 'net.bytzo'
 version = '0.2.1'
 
+repositories {
+	// Luckperms
+	maven { url = "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
 dependencies {
-	minecraft('com.mojang:minecraft:1.19.1')
+	minecraft('com.mojang:minecraft:1.18.2')
 	mappings(loom.officialMojangMappings())
-	modImplementation('net.fabricmc:fabric-loader:0.14.8')
+	modImplementation('net.fabricmc:fabric-loader:0.14.9')
+	modImplementation(include("me.lucko:fabric-permissions-api:0.2-SNAPSHOT"))
 }
 
 java {
